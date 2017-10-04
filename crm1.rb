@@ -1,4 +1,4 @@
-require_relative 'contact_17'    # my file is contact_r
+require_relative 'contact1'    # my file is contact_r
                                 # the CRM class uses the Contact class
 
 class CRM
@@ -150,3 +150,7 @@ end
 a_crm_app = CRM.new
 
 a_crm_app.main_menu
+
+at_exit do
+  ActiveRecord::Base.connection.close
+end
