@@ -1,2 +1,6 @@
 
 <h1> Favorites </h1>
+
+<% @favorites.each do |favorite| %>
+  <li> <a href="<%= favorite %>"> <%= favorite%> </a> </li>
+<% end %>
