@@ -1,4 +1,5 @@
 
+gem 'activerecord', '=4.2.7'
 require 'active_record'
 require 'mini_record'
 
@@ -11,11 +12,10 @@ class Contact < ActiveRecord::Base
   field :email,      as: :string
   field :note,       as: :text
 
-
-
   def full_name
     "#{ first_name } #{ last_name }"
   end
+
 
 end
 
